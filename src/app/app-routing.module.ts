@@ -14,12 +14,13 @@ import { ForgotPasswordComponent } from 'app/components/forgot-password/forgot-p
 import { VerifyEmailComponent } from 'app/components/verify-email/verify-email.component';
 
 import { AuthGuard } from './Guard/auth.guard';
+import { LoginGuard } from './Guard/login.guard';
 
 // routes
 const routes: Routes = [
   { path: '', component:DashboardComponent, canActivate:[AuthGuard] },
   { path: 'aboutUs', component: AboutUsComponent },
-  { path: 'dashboard', component: DashboardComponent },
+  { path: 'dashboard', component: DashboardComponent, canActivate:[AuthGuard] },
   { path: 'candidateRegister/:id', component: CandidateRegisterComponent, data: { type: 'edit' } },
   { path: 'candidateSearch', component: CandidateSearchComponent },
   { path: 'eventPost', component: EventPostComponent },

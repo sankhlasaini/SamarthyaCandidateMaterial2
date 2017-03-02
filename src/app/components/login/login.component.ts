@@ -38,6 +38,9 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit() { 
+    if (localStorage.getItem('currentUser')) {
+            this.redirect();
+        }
     this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
   }
 
@@ -63,5 +66,10 @@ export class LoginComponent implements OnInit {
           data =>{this.router.navigate([this.returnUrl]);},
           error => {console.log("Error in login method")}
         );
+  }
+
+  redirect(){
+    console.log('redirect');
+    this.router.navigate(['/dashboard']);
   }
 }
