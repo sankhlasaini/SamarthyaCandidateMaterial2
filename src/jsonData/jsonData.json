@@ -1,0 +1,44 @@
+{
+    "languages": [
+        { "name": "English" },
+        { "name": "Hindi" },
+        { "name": "English" },
+        { "name": "Hindi" },
+        { "name": "English" },
+        { "name": "Hindi" },
+        { "name": "English" },
+        { "name": "Hindi" },
+        { "name": "English" },
+        { "name": "Hindi" },
+        { "name": "English" },
+        { "name": "Hindi" },
+        { "name": "English" },
+        { "name": "Hindi" },
+        { "name": "English" },
+        { "name": "Hindi" },
+        { "name": "English" },
+        { "name": "Hindi" },
+        { "name": "English" },
+        { "name": "Hindi" },
+        { "name": "English" },
+        { "name": "Hindi" }
+    ],
+    "profession": [
+        { "name": "BPO", "value": "bpo" },
+        { "name": "Full Stack Developer", "value": "fullStackDev" },
+        { "name": "Civil Aviation", "value": "civilAviation" },
+        { "name": "Retail", "value": "retail" },
+        { "name": "Logistic Coordinator", "value": "logistic" }
+    ],
+    "locations": [
+        { "name": "Electronic City", "value": "electronicCity" },
+        { "name": "Koramangla", "value": "koramangla" },
+        { "name": "Whitefield", "value": "whitefield" },
+        { "name": "Pune", "value": "pune" }
+    ],
+    "placementCenter": [
+        { "name": "Banglore", "value": "bangalore" },
+        { "name": "Pune", "value": "pune" },
+        { "name": "NIIT", "value": "niit" }
+    ]
+}
