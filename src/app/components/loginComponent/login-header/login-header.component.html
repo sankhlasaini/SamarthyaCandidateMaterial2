@@ -1,0 +1,12 @@
+<!--Header start-->
+<md-toolbar color="primary" class="mainHeader">
+    <!--<a href="/">-->
+    <p class="logo">Samarthya</p>
+    <!--</a>-->
+
+</md-toolbar>
+<div class="langBar" fxFlex fxHide.xs>
+    <button *ngFor="let lang of languages" title={{lang.name}} class="langBtn" md-button>
+   <div> {{lang.nativeName}}</div>
+    </button>
+</div>
