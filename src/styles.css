@@ -1,0 +1,14 @@
+/*Theme Files for material design*/
+
+@import '~https://fonts.googleapis.com/icon?family=Material+Icons';
+
+/*@import '~@angular/material/core/theming/prebuilt/deeppurple-amber.css';*/
+
+.myFont {
+    font-family: 'Noto Serif', serif;
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+}

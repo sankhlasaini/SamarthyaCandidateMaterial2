@@ -1,0 +1,37 @@
+<!--Header start-->
+<md-toolbar color="primary" class="mainHeader">
+    <!--<a href="/">-->
+    <p class="logo">Samarthya</p>
+    <!--</a>-->
+
+</md-toolbar>
+<div class="langBar" fxFlex fxHide.xs>
+    <button *ngFor="let lang of languages" title={{lang.name}} class="langBtn" md-button>
+   <div> {{lang.nativeName}}</div>
+    </button>
+</div>
+
+<!--RouterLinks for login password reset and candidate register-->
+<!--<a routerLink="/login" routerLinkactive="active">LOGIN</a>
+    <a routerLink="/candidateRegister" routerLinkactive="active">REG</a>-->
+<!--<a routerLink="/passwordReset" routerLinkactive="active">RESET</a>-->
+<router-outlet></router-outlet>
+
+<!--footer starts-->
+<md-toolbar color="primary" class="footer" fxLayout="column">
+    <div fxFlex="50" class="footerHead">
+        <h5>Samarthya</h5>
+    </div>
+    <div fxFlex></div>
+    <div fxFlex="50" class="footerLinks">
+        <ul>
+            <li><a class="grey-text text-lighten-3" href="#">Samarthya Candidate</a></li>
+            <li><a class="grey-text text-lighten-3" href="#">Samarthya Placement</a></li>
+            <li><a class="grey-text text-lighten-3" href="#">FAQ</a></li>
+            <li><a class="grey-text text-lighten-3" href="#">About Us</a></li>
+        </ul>
+    </div>
+</md-toolbar>
+<md-toolbar color="primary" class="copyright">
+    <p> © Copyright Samarthya 2017</p>
+</md-toolbar>
