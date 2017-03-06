@@ -1,0 +1,206 @@
+<!--login Header-->
+<app-login-header></app-login-header>
+
+<!--Register card-->
+<md-grid-list cols="1" rowHeight="1200">
+    <md-grid-tile>
+        <!--card Start-->
+        <md-card class="loginCard">
+            <md-card-title>Register</md-card-title>
+            <md-card-content>
+                <form [formGroup]="userForm" (ngSubmit)="onRegister()">
+
+                    <!--First Name-->
+                    <div fxLayout="row" fxLayoutAlign="start end">
+                        <div fxFlex="7">
+                            <i class="material-icons formIcons">perm_identity</i>
+                        </div>
+                        <div fxFlex="93">
+                            <md-input-container class="full-width">
+                                <input mdInput formControlName="fname" id="fname" type="text" class="validate" placeholder="First Name" />
+                                <md-hint align="start" class="full-width">
+                                    <app-control-messages [control]="userForm.controls.fname" class="errorStyle"></app-control-messages>
+                                </md-hint>
+                            </md-input-container>
+                        </div>
+                    </div>
+
+                    <!--Last Name-->
+                    <div fxLayout="row" fxLayoutAlign="start end">
+                        <div fxFlex="7">
+                            <i class="material-icons formIcons">perm_identity</i>
+                        </div>
+                        <div fxFlex="93">
+                            <md-input-container class="full-width">
+                                <input mdInput formControlName="lname" id="lname" type="text" class="validate" placeholder="Last Name" />
+                                <md-hint align="start" class="full-width">
+                                    <app-control-messages [control]="userForm.controls.lname" class="errorStyle"></app-control-messages>
+                                </md-hint>
+                            </md-input-container>
+                        </div>
+                    </div>
+
+                    <!--Gender-->
+                    <div fxLayout="row" fxLayoutAlign="start end">
+                        <div fxFlex="7">
+                            <i class="material-icons formIcons levelIcon">wc</i>
+                        </div>
+                        <div fxFlex="93" class="full-width">
+                            <md-radio-group formControlName="gender">
+                                <md-radio-button class="gender" value="male">Male</md-radio-button>
+                                <md-radio-button class="gender" value="female">Female</md-radio-button>
+                            </md-radio-group>
+                        </div>
+                    </div>
+
+                    <!--Registration ID-->
+                    <div fxLayout="row" fxLayoutAlign="start end">
+                        <div fxFlex="7">
+                            <i class="material-icons formIcons">assignment_ind</i>
+                        </div>
+                        <div fxFlex="93">
+                            <md-input-container class="full-width">
+                                <input mdInput formControlName="regId" id="regId" type="text" class="validate" placeholder="Registration Id" />
+                                <md-hint align="start" class="full-width">
+                                    <app-control-messages [control]="userForm.controls.regId" class="errorStyle"></app-control-messages>
+                                </md-hint>
+                            </md-input-container>
+                        </div>
+                    </div>
+
+                    <!--Date of Birth
+                        <a class="c-btn c-datepicker-btn">
+                            <span class="material-icon">Click me</span>
+                        </a>-->
+
+                    <!--Email-->
+                    <div fxLayout="row" fxLayoutAlign="start end">
+                        <div fxFlex="7">
+                            <i class="material-icons formIcons">mail</i>
+                        </div>
+                        <div fxFlex="93">
+                            <md-input-container class="full-width">
+                                <input mdInput formControlName="email" id="email" type="text" class="validate" value={{emailId}} placeholder="Email" />
+                                <md-hint align="start" class="full-width">
+                                    <app-control-messages [control]="userForm.controls.email" class="errorStyle"></app-control-messages>
+                                </md-hint>
+                            </md-input-container>
+                        </div>
+                    </div>
+
+                    <!--Adhar-->
+                    <div fxLayout="row" fxLayoutAlign="start end">
+                        <div fxFlex="7">
+                            <i class="material-icons formIcons">chrome_reader_mode</i>
+                        </div>
+                        <div fxFlex="93">
+                            <md-input-container class="full-width">
+                                <input mdInput formControlName="aadhar" id="aadhar" type="text" class="validate" placeholder="Aadhar No." />
+                                <md-hint align="start" class="full-width">
+                                    <app-control-messages [control]="userForm.controls.aadhar" class="errorStyle"></app-control-messages>
+                                </md-hint>
+                            </md-input-container>
+                        </div>
+                    </div>
+
+                    <!--Mobile No-->
+                    <div fxLayout="row" fxLayoutAlign="start end">
+                        <div fxFlex="7">
+                            <i class="material-icons formIcons">call</i>
+                        </div>
+                        <div fxFlex="93">
+                            <md-input-container class="full-width">
+                                <input mdInput formControlName="mob" id="mob" type="text" class="validate" placeholder="Mobile No." />
+                                <md-hint align="start" class="full-width">
+                                    <app-control-messages [control]="userForm.controls.mob" class="errorStyle"></app-control-messages>
+                                </md-hint>
+                            </md-input-container>
+                        </div>
+                    </div>
+
+                    <!--passowrd-->
+                    <div fxLayout="row" fxLayoutAlign="start end">
+                        <div fxFlex="7">
+                            <i class="material-icons formIcons">lock</i>
+                        </div>
+                        <div fxFlex="93">
+                            <md-input-container class="full-width">
+                                <input mdInput formControlName="password" id="password" type="password" class="validate" #password (blur)="passwordValue(password.value)" placeholder="Password" />
+                                <md-hint align="start" class="full-width">
+                                    <app-control-messages [control]="userForm.controls.password" class="errorStyle"></app-control-messages>
+                                </md-hint>
+                            </md-input-container>
+                        </div>
+                    </div>
+
+                    <!--confirm password-->
+                    <div fxLayout="row" fxLayoutAlign="start end">
+                        <div fxFlex="7">
+                            <i class="material-icons formIcons">lock</i>
+                        </div>
+                        <div fxFlex="93">
+                            <md-input-container class="full-width">
+                                <input mdInput formControlName="conPassword" id="conPassword" type="password" class="validate" #conPassword (keyup)="conPasswordValue(conPassword.value)" placeholder="Confirm Password" />
+                                <md-hint align="start" class="full-width">
+                                    <div *ngIf="passwordMatchWarning" class="errorStyle">{{passwordMatchWarning}}</div>
+                                </md-hint>
+                            </md-input-container>
+                        </div>
+                    </div>
+
+                    <!--Profession-->
+                    <div fxLayout="row" fxLayoutAlign="start end">
+                        <div fxFlex="7">
+                            <i class="material-icons formIcons levelIcon">layers</i>
+                        </div>
+                        <div fxFlex="93">
+                            <md-select placeholder="Profession" formControlName="profession" class="full-width">
+                                <md-option *ngFor="let pro of profession" color="accent" class="full-width" [value]="pro.value">
+                                    {{ pro.name }}
+                                </md-option>
+                            </md-select>
+                        </div>
+                    </div>
+
+                    <!--location Picode-->
+                    <div fxLayout="row" fxLayoutAlign="start end">
+                        <div fxFlex="7">
+                            <i class="material-icons formIcons">call</i>
+                        </div>
+                        <div fxFlex="93">
+                            <md-input-container class="full-width">
+                                <input mdInput formControlName="pincode" id="pincode" type="text" class="validate" placeholder="Pincode" />
+                                <md-hint align="start" class="full-width">
+                                    <app-control-messages [control]="userForm.controls.pincode" class="errorStyle"></app-control-messages>
+                                </md-hint>
+                            </md-input-container>
+                        </div>
+                    </div>
+
+                    <!--placementCenter-->
+                    <div fxLayout="row" fxLayoutAlign="start end">
+                        <div fxFlex="7">
+                            <i class="material-icons formIcons levelIcon">person_pin_circle</i>
+                        </div>
+                        <div fxFlex="93">
+                            <md-select placeholder="Placement Center" formControlName="placementCenter" class="full-width">
+                                <md-option *ngFor="let center of placementCenter" class="full-width" [value]="center.value">
+                                    {{ center.name }}
+                                </md-option>
+                            </md-select>
+                        </div>
+                    </div>
+
+                    <!--Register Button-->
+                    <div fxLayout="row">
+                        <button md-raised-button color="accent" class="full-width registerBtn" type="submit" id="resetBtn" [disabled]="!userForm.valid">Register</button>
+                    </div>
+
+                </form>
+            </md-card-content>
+        </md-card>
+    </md-grid-tile>
+</md-grid-list>
+
+<!--footer-->
+<app-login-footer></app-login-footer>
