@@ -1,0 +1,21 @@
+/*Theme Files for material design*/
+
+@import url('https://fonts.googleapis.com/css?family=Griffy');
+@import '~https://fonts.googleapis.com/icon?family=Material+Icons';
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans');
+
+/*@import '~@angular/material/core/theming/prebuilt/deeppurple-amber.css';*/
+
+body {
+    padding: 0px;
+    margin: 0px;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.mat-menu-panel {
+    position: absolute;
+    margin-right: 15px;
+    right: 0px;
+    top: 50px;
+}
